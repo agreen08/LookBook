@@ -1,0 +1,338 @@
+/* Настройки шрифтов, исключений
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Jaldi';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/jaldi-v12-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/jaldi-v12-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v23-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lato-v23-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v23-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  /* itim-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/itim-v10-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/itim-v10-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+html {
+    box-sizing: border-box;
+  }
+
+  *, *::before, *::after {
+      box-sizing: inherit;
+  }
+
+body {
+    font-family: Lato;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #000000;
+}
+
+.wrapper {
+    max-width: 1130px;
+    margin: 0 auto;
+  }
+
+/* Оформляем header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 32px;
+}
+
+.header-list {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.header-item {
+    margin-right: 82px;
+}
+
+.header-item:last-child {
+    margin-right: 0;
+}
+
+.header-link {
+    font-family: Jaldi;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 51px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.header-link:hover, .header-link:focus, .header-link:active {
+    opacity: 75%;
+    color: #3596E2;
+    
+}
+/* header закончили */
+
+/* блок intro */
+.intro {
+    height: 100vh;
+    background: url(../img/background.png) no-repeat center;
+    background-size: cover;
+    padding-top: 320px;
+}
+
+.intro-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 36px;
+    position: absolute;
+    left: 520px;
+    top: 187px;
+}
+
+.intro-title {
+    font-family: Itim;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 36px;
+    color: #8E8E8E;
+    left: 520px;
+    position: absolute;
+}
+/* intro закончили */
+
+/* блок sale */
+.sale-title {
+    font-family: Lato;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000000;
+    left: 520px;
+    top: 487px;
+    position: absolute;
+}
+
+.sale-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 190px;    
+}
+
+.sale-card {
+grid-column: span 1;
+}
+
+.sale-card-pic img{
+    width: 146px;
+    height: 196px;
+    margin-top: 45px;  
+}
+
+.sale-card-title {
+    font-family: Lato;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 36px;
+    position: absolute;
+}
+/* sale закончили */
+
+/* блок release */
+.release-title {
+    font-family: Lato;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000000;
+    left: 520px;
+    top: 1100px;
+    position: absolute;
+}
+
+.release-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 20px;
+}
+
+.release-card {
+grid-column: span 1;
+}
+
+.release-card-pic img{
+    width: 146px;
+    height: 196px;
+    margin-top: 200px;
+       
+}
+
+.release-desc {
+    text-align: center;
+}
+
+/* release закончили */
+
+/* about блок */
+ .about {
+     margin-top: 85px;
+ }
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0 20px;
+    align-items: center;
+}
+
+.about-title {
+     font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.about-desc {
+    font-family: Lato;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #555555;
+    text-align: justify;
+    margin-top: 85px;
+}
+/* about закончили */
+
+/* shops блок */
+.shops {
+    margin-top: 85px;
+}
+
+.shops-title {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 40px;
+    line-height: 48px;
+}
+.shops-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 120px;
+    align-items: left;
+}
+
+.shops-wrapper img {
+    width: 544px;
+    height: 443px;
+}
+
+.shops-list {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 55px;   
+}
+
+.shops-list a {
+    text-decoration: none;
+    line-height: 45px;
+}
+
+.shops-item {
+    color: #000000;
+    background-image: url(../img/metka.png);
+    background-repeat: no-repeat;
+    background-position: left; 
+    padding-left: 30px; 
+}
+
+.shops-item:hover, .shops-item:focus, .shops-item:active {
+    opacity: 75%;
+    color: #3596E2;
+}
+/*shops закончили */
