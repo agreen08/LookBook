@@ -481,6 +481,144 @@ body {
 
 /* content ends */
 
+/* =======================================BOOK DESCRIPTION=============================*/
+
+/* book cover starts */
+
+.book-cover {
+    margin-top: 140px;
+}
+
+.cover-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: -80px;
+    align-items: left;
+
+
+}
+
+.book-cover-img  img {
+    width: 300px;
+    height: 400px;
+}
+
+.cover-info h3 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;   
+}
+
+.cover-info h4 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3f3f3f;
+}
+
+.cover-info p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 17px;
+}
+
+.available {
+    color: #8BC34A;
+    padding-top: 69px;
+    background-image: url(../img/tip.png);
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    padding-left: 40px;   
+}
+
+.add {
+    width: 138px;
+    height: 30px;
+    background: rgba(118, 80, 220, 0.32);
+    border-radius: 30px;
+    border: none;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.wishlist {
+    width: 165px;
+    height: 30px;
+    border-radius: 30px;
+    border: 1px solid #AF9AE7;
+    cursor: pointer;
+}
+
+/* book cover ends */
+
+/* details starts */
+.details {
+    margin-top: 40px;
+    position: relative;
+}
+
+.details h3 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.details-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    margin-top: 30px;
+}
+ .list {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    color: #333333;
+ }
+
+ .list-item {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+ }
+
+/* detail ends */
+
+/* description starts */
+.description {
+    margin-top: 50px;
+    position: relative;
+}
+
+.description h3 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 60px;
+}
+
+.description p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+}
+/* description ends */
+
+
 
 
 
