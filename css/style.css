@@ -618,6 +618,107 @@ body {
 }
 /* description ends */
 
+/* =======================================BAG====================================*/
+.bag-title {
+    margin-top: 120px;
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.bag-title h2 {
+    text-align: left;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+/* filling starts */
+
+.filling-wrapper {
+     display: grid;
+     grid-template-columns: 180px 400px 300px auto;
+     width: 950px;
+     height: 250px;
+     border-bottom: 2px solid #d9d9d9;
+     margin-bottom: 30px;
+     
+     
+}
+
+.filling-pic {
+    text-align: center;
+}
+.filling-pic-thumb {
+    width: 170px;
+    height: 220px;   
+}
+
+.filling-desc {
+    padding-left: 50px;
+}
+
+.filling-desc-name {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.filling-desc-author {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3f3f3f;
+}
+
+.filling-desc-price {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 17px;
+}
+.filling-button {
+    padding-left: 30px;
+    padding-top: 180px;
+    
+    
+}
+
+.checkout {
+    width: 180px;
+    height: 45px;
+    background: rgba(36, 146, 255, 0.64);
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.checkout p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.filling-bookmark {
+    padding-top: 180px;
+}
+
+.bookmark-thumb {
+    cursor: pointer;
+}
+
+
+
+/* filling ends */
+
 
 
 
