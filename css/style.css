@@ -848,6 +848,82 @@ body {
 }
 /* our shop ends */
 
+/*===============================================GIFT CARDS==================================*/
+.gift-title {
+    margin-top: 120px;
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.gift-title h2 {
+    text-align: left;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+/* gift card starts */
+
+.gift-wrapper {
+    position: relative;
+    width: 780px;
+    height: 188px;
+    margin-bottom: 60px;
+    background: #ffffff;
+    border: 1px solid #DCDCDC;
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-columns: 80px auto auto;  
+}
+
+.gift-thumb {
+    height: 70px;
+    width: 70px;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.gift-desc-name {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 10px;
+}
+
+.gift-desc-value {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 15px;
+    margin-top: 45px;
+}
+
+.gift-desc-access {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-top: 45px;
+    color: #414141;
+}
+
+.gift-price p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 370px;
+    margin-top: 145px;
+    
+}
+/*gift card ends */
+
 
 
 
