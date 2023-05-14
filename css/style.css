@@ -714,10 +714,142 @@ body {
 .bookmark-thumb {
     cursor: pointer;
 }
-
-
-
 /* filling ends */
+
+/*========================================CHECKOUT============================*/
+
+.checkout-title {
+    margin-top: 120px;
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.checkout-title h2 {
+    text-align: left;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
+ /* check-cover starts */
+.check-cover-wrapper {
+     display: grid;
+     grid-template-columns: 180px auto;
+     width: 600px;
+     height: 250px;
+}
+ /* check-cover ends */
+
+ /* info-wrapper starts */
+.info-wrapper {
+     display: flex;
+     width: 1140px;
+     height: 350px;
+     background: #ffffff;
+     border: 1px solid #DCDCDC;
+     border-radius: 25px;
+}
+ /* info-wrapper ends */
+
+ /* info-bar starts */
+.info-bar {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    
+}
+.form-info {
+     width: 500px;
+     height: 38px;
+     background: #EFEFEF;
+     border-radius: 30px;
+     margin-left: 45px;
+     margin-bottom: 22px;   
+}
+
+.form-info input {
+    width: 500px;
+    height: 38px;
+    background: #EFEFEF;
+    border-radius: 30px;
+    border: none;
+    font-family: Lato;
+    font-style: normal;  
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.info-bar2 {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+ /* info-bar ends */
+
+/* select starts */
+.select-wrapper {
+    display: flex;
+    width: 1140px;
+    height: 435px;
+    background: #ffffff;
+    border: 1px solid #DCDCDC;
+    border-radius: 25px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.select-bar {
+    display: grid;
+    grid-template-columns: 250px 890px;
+    grid-template-rows: 145px 145px 145px;
+    align-items: center;
+    
+}
+/* select ends */
+
+/* dpd starts */
+.dpd-thumb {
+    width: 146px;
+    height: 57px;
+    margin-left: 47px;
+}
+
+.select-form {
+    width: 602px;
+    height: 35px;
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 20px;
+    margin-left: 25px;   
+}
+.select-form input {
+    width: 602px;
+    height: 35px;
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 20px;
+    border: none;
+    font-family: Lato;
+    font-style: normal;  
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 10px;
+}
+/* dpd ends */
+
+/* omniva starts */
+.omniva-thumb {
+    width: 106px;
+    height: 106px;
+    margin-left: 47px;
+}
+/* omniva ends */
+
+/* our shop starts */
+.our-shop-thumb {
+    margin-left: 47px;
+}
+/* our shop ends */
+
+
+
 
 
 
