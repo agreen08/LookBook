@@ -71,23 +71,25 @@
             <div class="wrapper">
                 <h2>New Release</h2>
                 <div class="release-cards">
-                    <a href="!#"><img src="./img/perfectvintage.png" alt="perfectvintage" class="release-card-thumb">
-                            Perfect Vintage <br> Author: Chelsea Fagan <br>Price: $19.00
+                <?php foreach ($arrayResult as $data) {?> 
+                     <a href="!#"><img src="<?=$data["img"]?>" alt="release" class="release-card-thumb">
+                     <?=$data["title"]?> <br> Author: <?=$data["author"]?> <br>Price: <?=$data["price"]?>
                     </a>
-                    <a href="!#"><img src="./img/houseofcotton.png" alt="houseofcotton" class="release-card-thumb">
-                            House of Cotton<br> Author: Monica Brashears<br> Price: $26.03
+                    <!-- <a href="!#"><img src="<?=$data["img"]?>" alt="release" class="release-card-thumb">
+                    <?=$data["title"]?><br> Author: <?=$data["author"]?><br> Price: <?=$data["price"]?>
                     </a>
-                    <a href="!#"><img src="./img/halfmoon.png" alt="halfmoon" class="release-card-thumb">
-                            The Half Moon <br>Author: Mary Beth Keane <br>Price: $27.00
+                    <a href="!#"><img src="<?=$data["img"]?>" alt="release" class="release-card-thumb">
+                    <?=$data["title"]?> <br>Author: <?=$data["author"]?> <br>Price: <?=$data["price"]?>
                     </a>
-                    <a href="!#"><img src="./img/postcard.png" alt="postcard" class="release-card-thumb">
-                            The Postcard <br>Author: Anne Berest <br>Price: $26.00
+                    <a href="!#"><img src="<?=$data["img"]?>" alt="release" class="release-card-thumb">
+                    <?=$data["title"]?> <br>Author: <?=$data["author"]?> <br>Price: <?=$data["price"]?>
                     </a>
-                    <a href="!#"><img src="./img/code.png" alt="code" class="release-card-thumb">
-                            CODE <br>Author: Charlez Petzold <br>Price: $37.19 
-                    </a>
+                    <a href="!#"><img src="<?=$data["img"]?>" alt="release" class="release-card-thumb">
+                    <?=$data["title"]?> <br>Author: <?=$data["author"]?> <br>Price: <?=$data["price"]?> 
+                    </a>  -->
+                    <?php } ?>  
                 </div>
-            </div>
+            </div> 
         </section>
         <section class="about">
             <div class="wrapper">
