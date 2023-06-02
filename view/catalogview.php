@@ -49,9 +49,6 @@
     </section>
     <section class="content">
       <div class="wrapper">
-        <?php foreach ($arrayAll[0] as $data) {?>
-        <h2><?=$data["genres"]?></h2>
-        <?php } ?>
         <?php foreach ($arrayAll[1] as $data) {?>
           <?php if ($data["id"] == "22") {
             $link = 'book.php';

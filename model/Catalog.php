@@ -32,7 +32,7 @@ class Catalog {
     ];
     $pdo = new PDO($dsn, $user, $pass, $opt);
 
-    $result = $pdo->query('SELECT * FROM book_desc where category_id="5" ORDER BY id');
+    $result = $pdo->query('SELECT * FROM book_desc ORDER BY id');
     $arrayResult = $result->fetchAll();
 
     return $arrayResult;
