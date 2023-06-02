@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Май 27 2023 г., 19:54
--- Версия сервера: 10.4.17-MariaDB
--- Версия PHP: 8.0.0
+-- Время создания: Июн 02 2023 г., 19:18
+-- Версия сервера: 10.4.28-MariaDB
+-- Версия PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,18 +24,37 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `admins`
+--
+
+CREATE TABLE `admins` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_estonian_ci;
+
+--
+-- Дамп данных таблицы `admins`
+--
+
+INSERT INTO `admins` (`id`, `name`, `password`) VALUES
+(1, 'admin', '12345');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `book_desc`
 --
 
 CREATE TABLE `book_desc` (
   `id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
-  `img` varchar(255) COLLATE utf8_estonian_ci NOT NULL,
-  `title` text COLLATE utf8_estonian_ci NOT NULL,
-  `author` text COLLATE utf8_estonian_ci NOT NULL,
-  `price` varchar(20) COLLATE utf8_estonian_ci NOT NULL,
-  `description` text COLLATE utf8_estonian_ci NOT NULL,
-  `aboutauthor` text COLLATE utf8_estonian_ci NOT NULL
+  `img` varchar(255) NOT NULL,
+  `title` text NOT NULL,
+  `author` text NOT NULL,
+  `price` varchar(20) NOT NULL,
+  `description` text NOT NULL,
+  `aboutauthor` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_estonian_ci;
 
 --
@@ -69,12 +88,12 @@ INSERT INTO `book_desc` (`id`, `category_id`, `img`, `title`, `author`, `price`,
 CREATE TABLE `book_details` (
   `id` int(11) NOT NULL,
   `desc_id` int(11) NOT NULL,
-  `price` varchar(20) COLLATE utf8_estonian_ci NOT NULL,
-  `publisher` text COLLATE utf8_estonian_ci NOT NULL,
-  `publish_date` varchar(100) COLLATE utf8_estonian_ci NOT NULL,
-  `pages` varchar(20) COLLATE utf8_estonian_ci NOT NULL,
-  `language` varchar(20) COLLATE utf8_estonian_ci NOT NULL,
-  `type` varchar(20) COLLATE utf8_estonian_ci NOT NULL
+  `price` varchar(20) NOT NULL,
+  `publisher` text NOT NULL,
+  `publish_date` varchar(100) NOT NULL,
+  `pages` varchar(20) NOT NULL,
+  `language` varchar(20) NOT NULL,
+  `type` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_estonian_ci;
 
 -- --------------------------------------------------------
@@ -85,7 +104,7 @@ CREATE TABLE `book_details` (
 
 CREATE TABLE `catalog` (
   `id` int(11) NOT NULL,
-  `genres` varchar(1000) COLLATE utf8_estonian_ci NOT NULL
+  `genres` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_estonian_ci;
 
 --
@@ -99,9 +118,43 @@ INSERT INTO `catalog` (`id`, `genres`) VALUES
 (4, 'Psychology'),
 (5, 'Fantasy');
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `status` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `country` varchar(50) NOT NULL,
+  `telephone` varchar(50) NOT NULL,
+  `homeadress` varchar(50) NOT NULL,
+  `favouritegenres` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_estonian_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `lastname`, `status`, `password`, `email`, `city`, `country`, `telephone`, `homeadress`, `favouritegenres`, `pass`) VALUES
+(1, 'admin', 'adminovi4', 'admin', '123456', 'admin@lookbook.com', 'Sillamäe', 'Estonia', '+45677898990', 'Georgi 25-400', 'Thriller', '$2y$12$pxB2ofiiNZkxObmbBvBOyegwCjHCVFYhapjiSsdYXUa');
+
 --
 -- Индексы сохранённых таблиц
 --
+
+--
+-- Индексы таблицы `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `book_desc`
@@ -114,8 +167,7 @@ ALTER TABLE `book_desc`
 -- Индексы таблицы `book_details`
 --
 ALTER TABLE `book_details`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `desc_id` (`desc_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `catalog`
@@ -124,8 +176,20 @@ ALTER TABLE `catalog`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `book_desc`
@@ -144,6 +208,12 @@ ALTER TABLE `book_details`
 --
 ALTER TABLE `catalog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

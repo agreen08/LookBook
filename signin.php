@@ -42,7 +42,7 @@
                     <a href="!#" class="signin">Sign In</a>
                 </div>
                 <div class="link2-wrapper">
-                    <a href="!#" class="login">or Log In</a>
+                    <a href="./admin/admin_login.php" class="login">or Log In</a>
                 </div>  
              </div>
          </section>
@@ -50,22 +50,22 @@
              <div class="wrapper">
                  <div class="signin-form-wrapper">
                      <div class="signin-fill">
-                        <form action="submit" class="signin-info">
+                        <form class="signin-info" role="form" method="POST" action="registerAnswer">
                             <input type="text" placeholder="Firstname">
                         </form>
-                        <form action="submit" class="signin-info">
+                        <form class="signin-info" role="form" method="POST" action="registerAnswer">
                             <input type="text" placeholder="Lastname">
                         </form>
-                        <form action="submit" class="signin-info">
+                        <form class="signin-info" role="form" method="POST" action="registerAnswer">
                             <input type="text" placeholder="Country">
                         </form>
-                        <form action="submit" class="signin-info">
+                        <form class="signin-info" role="form" method="POST" action="registerAnswer">
                             <input type="text" placeholder="City">
                         </form>
-                        <form action="submit" class="signin-info">
+                        <form class="signin-info" role="form" method="POST" action="registerAnswer">
                             <input type="text" placeholder="Home adress">
                         </form>
-                        <form action="submit" class="signin-info">
+                        <form class="signin-info" role="form" method="POST" action="registerAnswer">
                             <input type="text" placeholder="Telephone">
                         </form>
                     </div>
@@ -78,7 +78,7 @@
                             <div class="line"></div>
                             <div class="line"></div>
                             <div class="line"></div>
-                            <button class="sign-btn"><p>Sign In</p></button>
+                            <button type="submit" class="sign-btn" name="save"><p>Sign In</p></button>
                         </div>
                     </div>
                      </div>
@@ -98,56 +98,7 @@
          </section>
      </main>
      <footer class="footer">
-        <div class="wrapper">
-        <div class="footer-item">
-          <div class="footer-logo">
-            <a href="./">
-            <img src="./img/small-logo.svg" alt="footer-logo" class="footer-logo-pic"></a>
-          </div>
-          <nav class="footer-nav">
-            <ul class="footer-menu">
-              <li class="footer-menu-item">
-                <h3 class="footer-menu-title">Contact</h3>
-                <a href="!#" class="footer-menu-link">info@lookbook.com</a>
-              </li>
-              <li class="footer-menu-item">
-                <a href="!#" class="footer-menu-link">+3336756774</a>
-              </li>
-              <li class="footer-menu-item">
-                <a href="!#" class="footer-menu-link">Location</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="footer-nav">
-            <ul class="footer-menu">
-              <li class="footer-menu-item">
-                <h3 class="footer-menu-title">About Us</h3>
-                <a href="!#" class="footer-menu-link">Team</a>
-              </li>
-              <li class="footer-menu-item">
-                <a href="!#" class="footer-menu-link">Shops</a>
-              </li>
-              <li class="footer-menu-item">
-                <a href="!#" class="footer-menu-link">Career</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="footer-nav">
-            <ul class="footer-menu">
-              <li class="footer-menu-item">
-                <h3 class="footer-menu-title">Social Media</h3>
-                <a href="!#" class="footer-menu-link">Facebook</a>
-              </li>
-              <li class="footer-menu-item">
-                <a href="!#" class="footer-menu-link">Twitter</a>
-              </li>
-              <li class="footer-menu-item">
-                <a href="!#" class="footer-menu-link">Instagram</a>
-              </li>
-            </ul>
-          </nav>
-          </div>
-        </div>
-       </footer>
+     <div class="wrapper"></div>
+    </footer>
 </body>
 </html>
