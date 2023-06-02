@@ -1,56 +1,13 @@
 <?php
-
+//отображение 5 последних добавленных книг в базу
 class Model {
-    
-//         private $pdo;
-//         private $host;
-//         private $db;
-//         private $user;
-//         private $pass;
-//         private $charset;
-    
-//         function __construct() {
-//             $this->host = '127.0.0.1';
-//             $this->db = 'lookbook';
-//             $this->user = 'root';
-//             $this->pass = '';
-//             $this->charset = 'utf8';
-//             $this->connect();
-//         }
-
-//         function connect(){
-//             try {
-//                 $this->pdo = new PDO('mysql:host='.$this->host.';dbname='.$this->db.';charset='.$this->charset.'',
-//                 $this->user,
-//                 $this->pass, 
-//                 [
-//                     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-//                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-//                     PDO::ATTR_EMULATE_PREPARES   => false,
-//                 ]);
-//             } catch (Exception $e) {
-//                 die('Connection failed : ' . $e->getMessage());
-//             }
-//             return $this->pdo;
-//         }
-
-//         function __destruct(){
-//             $this->disconnect();
-//         }
-
-//         function disconnect()
-//     {
-//         if ($this->pdo) {
-//             $this->pdo = null;
-//         }
-//     }
 
     public function GetData() {
          
         $mysqli = new mysqli('localhost', 'root', '', 'lookbook');
 
         if(mysqli_connect_errno()) {
-            print_f('Соедение не установлено');
+            print_f('Соединение не установлено');
             exit();
         }
 

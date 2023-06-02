@@ -1,8 +1,8 @@
 <?php
 class Book {
-
+    // получение книги из базы данных по указанному id
     public function GetOneBook() {
-         
+         //соединение с базой
         $mysqli = new mysqli('localhost', 'root', '', 'lookbook');
 
         if(mysqli_connect_errno()) {
@@ -30,7 +30,7 @@ class Book {
             PDO::ATTR_EMULATE_PREPARES   => false,
         ];
         $pdo = new PDO($dsn, $user, $pass, $opt);
-
+        
         $result = $pdo->query('SELECT * FROM book_desc where id="22"');
         $arrayResult = $result->fetchAll();
 

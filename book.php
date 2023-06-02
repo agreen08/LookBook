@@ -1,5 +1,5 @@
 <?php
-
+// запуск описания книги по указанному id
 require_once ('view/View.php');
 require_once ('controller/Controller.php');
 

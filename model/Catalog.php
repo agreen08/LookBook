@@ -1,13 +1,13 @@
 <?php
-
+//отображение книг и жанров
 class Catalog {
 
     public function GetCatalog() {
-
+    //соединение с базой
     $mysqli = new mysqli('localhost', 'root', '', 'lookbook');
 
     if(mysqli_connect_errno()) {
-        print_f('Соедение не установлено');
+        print_f('Соединение не установлено');
         exit();
     }
 

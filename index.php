@@ -1,5 +1,5 @@
 <?php
-
+// Запуск стартовой страницы
 require_once ('view/View.php');
 require_once ('controller/Controller.php');
 

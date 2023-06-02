@@ -1,5 +1,5 @@
 <?php
-
+//запуск сайта
 require_once ('./controller/Controller.php');
 
 class View {

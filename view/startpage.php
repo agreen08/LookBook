@@ -74,20 +74,7 @@
                 <?php foreach ($arrayResult as $data) {?> 
                      <a href="!#"><img src="<?=$data["img"]?>" alt="release" class="release-card-thumb">
                      <?=$data["title"]?> <br> Author: <?=$data["author"]?> <br>Price: <?=$data["price"]?>
-                    </a>
-                    <!-- <a href="!#"><img src="<?=$data["img"]?>" alt="release" class="release-card-thumb">
-                    <?=$data["title"]?><br> Author: <?=$data["author"]?><br> Price: <?=$data["price"]?>
-                    </a>
-                    <a href="!#"><img src="<?=$data["img"]?>" alt="release" class="release-card-thumb">
-                    <?=$data["title"]?> <br>Author: <?=$data["author"]?> <br>Price: <?=$data["price"]?>
-                    </a>
-                    <a href="!#"><img src="<?=$data["img"]?>" alt="release" class="release-card-thumb">
-                    <?=$data["title"]?> <br>Author: <?=$data["author"]?> <br>Price: <?=$data["price"]?>
-                    </a>
-                    <a href="!#"><img src="<?=$data["img"]?>" alt="release" class="release-card-thumb">
-                    <?=$data["title"]?> <br>Author: <?=$data["author"]?> <br>Price: <?=$data["price"]?> 
-                    </a>  -->
-                    <?php } ?>  
+                    </a> 
                 </div>
             </div> 
         </section>
