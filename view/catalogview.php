@@ -72,11 +72,6 @@
             <p class="author">Hal Leonard Corp</p>
             <p class="price">$15.79</p>
           </a>
-          <a href="harrypotter.html"><img src="./img/harrypotter.png" alt="harrypotter" class="content-card-thumb">
-            <p class="name">Harry Potter and the Order of the Phoenix</p>
-            <p class="author">J. K. Rowling</p>
-            <p class="price">$12.08</p>
-          </a>
           <a href="water.html"><img src="./img/water.png" alt="water" class="content-card-thumb">
             <p class="name">Water: A Biography</p>
             <p class="author">Giulio Boccaletti</p>

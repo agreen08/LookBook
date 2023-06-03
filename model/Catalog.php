@@ -1,13 +1,13 @@
 <?php
-//отображение книг и жанров
+
 class Catalog {
 
     public function GetCatalog() {
-    //соединение с базой
+
     $mysqli = new mysqli('localhost', 'root', '', 'lookbook');
 
     if(mysqli_connect_errno()) {
-        print_f('Соединение не установлено');
+        print_f('Соедение не установлено');
         exit();
     }
 
@@ -32,8 +32,9 @@ class Catalog {
     ];
     $pdo = new PDO($dsn, $user, $pass, $opt);
 
-    $result = $pdo->query('SELECT * FROM book_desc ORDER BY id');
+    $result = $pdo->query('SELECT * FROM book_desc ORDER BY category_id');
     $arrayResult = $result->fetchAll();
+
 
     return $arrayResult;
 
@@ -43,7 +44,7 @@ class Catalog {
         $mysqli = new mysqli('localhost', 'root', '', 'lookbook');
 
     if(mysqli_connect_errno()) {
-        print_f('Соедение не установлено');
+        print_f('Соединение не установлено');
         exit();
     }
 
@@ -68,7 +69,7 @@ class Catalog {
     ];
     $pdo = new PDO($dsn, $user, $pass, $opt);
 
-    $result = $pdo->query('SELECT * FROM catalog');
+    $result = $pdo->query('SELECT * FROM catalog where id="1"');
     $arrayResult = $result->fetchAll();
 
     return $arrayResult;
