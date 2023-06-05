@@ -1,5 +1,5 @@
 <?php
-
+// подключение к базе данных
 include ('./components/connect.php');
 
 session_start();
@@ -35,11 +35,14 @@ include ('./components/admin_header.php');
     <h1 class="heading">dashboard</h1>
     
     <div class="box-container">
+        <!-- приветствие для админа -->
     <div class="box">
         <h3>Welcome!</h3>
         <p><?=$fetch_profile['name'];?></p>
+        <!-- переход на страницу смены пароля -->
         <a href="update_profile.php" class="btn">update profile</a>
     </div>
+    <!-- показывает, сколько всего у нас книг в базе -->
     <div class="box">
         <?php
         $select_books = $conn->prepare("SELECT * FROM `book_desc`");
@@ -50,6 +53,7 @@ include ('./components/admin_header.php');
         <p>books added</p>
         <a href="../catalog.php" class="btn">see all books</a>
     </div>
+    <!-- показывает, сколько различных жанров -->
     <div class="box">
         <?php
         $select_genres = $conn->prepare("SELECT * FROM `catalog`");
@@ -60,6 +64,7 @@ include ('./components/admin_header.php');
         <p>total added book genres</p>
         <a href="../catalog.php" class="btn">see all books</a>
     </div>
+    <!-- показывает количество зарегистрированных пользователей -->
     <div class="box">
         <?php
         $select_users = $conn->prepare("SELECT * FROM `users`");

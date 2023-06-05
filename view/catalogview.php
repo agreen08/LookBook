@@ -72,11 +72,6 @@
             <p class="author">Hal Leonard Corp</p>
             <p class="price">$15.79</p>
           </a>
-          <a href="water.html"><img src="./img/water.png" alt="water" class="content-card-thumb">
-            <p class="name">Water: A Biography</p>
-            <p class="author">Giulio Boccaletti</p>
-            <p class="price">$27.90</p>
-          </a>
           <a href="road.html"><img src="./img/road.png" alt="road" class="content-card-thumb">
             <p class="name">The Road</p>
             <p class="author">Cormac McCarthy</p>

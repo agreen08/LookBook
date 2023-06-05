@@ -8,7 +8,7 @@ $admin_id = $_SESSION['admin_id'];
 if (!isset($admin_id)) {
     header('location:admin_login.php');
 }
-
+// обновление админского профиля, отправка данных
 if (isset($_POST['submit'])) {
 
     $name = $_POST['name'];
@@ -16,19 +16,22 @@ if (isset($_POST['submit'])) {
 
     $update_name = $conn->prepare("UPDATE `admins` SET name = ? WHERE id = ?");
     $update_name->execute([$name, $admin_id]);
-
-    $empty_pass = '12345';
+    // пароль по умолчанию
+    $empty_pass = '12345'; 
+    // берем старый пароль от админа
     $select_old_pass = $conn->prepare("SELECT password FROM `admins` WHERE id = ?");
     $select_old_pass->execute([$admin_id]);
     $fetch_prev_pass = $select_old_pass->fetch(PDO::FETCH_ASSOC);
     $prev_pass = $fetch_prev_pass['password'];
+    // вводим новый пароль
     $old_pass = $_POST['old_pass'];
     $old_pass = filter_var($old_pass, FILTER_SANITIZE_STRING);
     $new_pass = ($_POST['new_pass']);
     $new_pass = filter_var($new_pass, FILTER_SANITIZE_STRING);
+    // подтверждаем новый пароль
     $confirm_pass = $_POST['confirm_pass'];
     $confirm_pass = filter_var($confirm_pass, FILTER_SANITIZE_STRING);
-
+    // сравнение введенных паролей
     if($old_pass != $empty_pass){
         $message[] = 'please enter your old password!';
     }elseif($old_pass != $prev_pass){
@@ -68,7 +71,7 @@ if (isset($_POST['submit'])) {
 <?php
 include ('./components/admin_header.php');
 ?>
-
+<!-- ответ пользователю на введенные данные -->
 <?php
 if(isset($message)) {
     foreach($message as $message) {

@@ -8,7 +8,7 @@ $admin_id = $_SESSION['admin_id'];
 if (!isset($admin_id)) {
     header('location:admin_login.php');
 };
-
+// отправляем данные через форму
 if(isset($_POST['add_book'])){
 
     $genre = $_POST['genre'];
@@ -24,22 +24,25 @@ if(isset($_POST['add_book'])){
     $author_info = $_POST['author_info'];
     $author_info = filter_var($author_info, FILTER_SANITIZE_STRING);
 
-    $img = $_FILES['img'];
+    $img = $_FILES['img']['name'];
     $img = filter_var($img, FILTER_SANITIZE_STRING);
+    $img_tmp_name = $_FILES['img']['tmp_name'];
     $img_folder = '../uploads/'.$img;
-
+    
+    // проверка, есть ли уже такая книга
     $select_book = $conn->prepare("SELECT * FROM `book_desc` WHERE title = ?");
     $select_book->execute([$title]);
 
     if($select_book->rowCount() > 0){
         $message[] = 'book already added!';
+    // вставляем данные в таблицу
     }else{
-        
+        // картинки должны сохранятся в указанной папке
         move_uploaded_file($img, $img_folder);
 
         $insert_book = $conn->prepare("INSERT INTO `book_desc` (category_id, img, title, author, price, description, aboutauthor) VALUES (?,?,?,?,?,?,?)");
         $insert_book->execute([$genre, $img, $title, $author, $price, $details, $author_info]);
-
+        // сообщение, если добавление прошло успешно
         $message[] = 'Book added!';
 
        
@@ -109,7 +112,7 @@ if(isset($message)) {
                 <input type="file" name="img" class="box" accept="img/jpg, img/jpeg, img/png" required>
             </div>
             <div class="inputBox">
-                <span>book description (required)</span>
+                <span>book description</span>
                 <textarea name="details" class="box" placeholder="enter book description"
                 required maxlenght="10000" cols="30" rows="10"></textarea>
             </div>
@@ -122,11 +125,6 @@ if(isset($message)) {
         </div>
     </form>
 </section>
-
-
-
-
-
 </body>
 </html> 
 

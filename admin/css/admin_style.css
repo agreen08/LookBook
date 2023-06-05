@@ -53,6 +53,7 @@ section {
     padding: 2rem;
 }
 
+/* кнопки */
 .btn,
 .delete-btn,
 .option-btn {
@@ -91,6 +92,7 @@ section {
     gap: 1rem;
 }
 
+/* сообщения пользователю */
 .message {
     position: sticky;
     top: 0;
@@ -119,6 +121,7 @@ section {
     color:var(--black);
 }
 
+/* заголовок админ-панели */
 .heading {
     text-align: center;
     margin-bottom: 2rem;
@@ -128,6 +131,7 @@ section {
 
 }
 
+/* форма для входа */
 .form-container {
     display: flex;
     align-items: center;
@@ -180,6 +184,7 @@ section {
     padding: 2rem;  
 }
 
+/* header styles */
 .header {
     position: sticky;
     top: 0; left: 0; right: 0;
@@ -261,6 +266,7 @@ section {
     display: none;
 }
 
+/* dashboard styles */
 .dashboard .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
@@ -292,3 +298,45 @@ section {
     margin: 1rem 0;
     color: var(--light-color);
 }
+
+/* add book styles */
+.add-book form {
+    margin: 0 auto;
+    max-width: 70rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2rem;
+}
+
+.add-book form .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.add-book form .flex .inputBox {
+    flex: 1 1 40rem;
+}
+
+.add-book form .flex .inputBox .box {
+    background-color: var(--light-bg);
+    border: var(--border);
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    border-radius: 0.5rem;
+}
+
+.add-book form .flex .inputBox span {
+    font-size: 2rem;   
+    color: var(--black);
+
+}
+
+.add-book form .flex .inputBox textarea {
+    height: 10rem;
+}
+

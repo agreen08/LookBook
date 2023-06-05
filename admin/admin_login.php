@@ -1,24 +1,26 @@
 <?php
-
+// подключение к базе данных
 include ('./components/connect.php');
 
 session_start();
-
+// отправляем данные в форму
 if(isset($_POST['submit'])) {
-
+    
     $name = $_POST['name'];
     $name = filter_var($name, FILTER_SANITIZE_STRING);
     $pass = $_POST['pass'];
     $pass = filter_var($pass, FILTER_SANITIZE_STRING);
 
+    // выбираем админа из таблицы
     $select_admin = $conn->prepare("SELECT * FROM `admins` WHERE name = ? AND
     password = ?");
     $select_admin->execute([$name, $pass]);
-
+    // сравнение полученных данных, если ОК, переадресация в админ-панель
     if($select_admin->rowCount() > 0) {
         $fetch_admin_id = $select_admin->fetch(PDO::FETCH_ASSOC);
         $_SESSION['admin_id'] = $fetch_admin_id['id'];
         header('location:dashboard.php');
+    // если данные некорректны
     }else{
         $message[] = 'Incorrect username or password!';
     
@@ -41,6 +43,7 @@ if(isset($_POST['submit'])) {
 </head>
 <body>
 
+<!-- сообщение, если данные некорретны -->
 <?php
 if(isset($message)) {
     foreach($message as $message) {
