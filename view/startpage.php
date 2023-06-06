@@ -75,6 +75,7 @@
                      <a href="!#"><img src="<?=$data["img"]?>" alt="release" class="release-card-thumb">
                      <?=$data["title"]?> <br> Author: <?=$data["author"]?> <br>Price: <?=$data["price"]?>
                     </a> 
+                    <?php } ?> 
                 </div>
             </div> 
         </section>
