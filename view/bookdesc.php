@@ -29,7 +29,7 @@
                     <a href="giftcards.html" class="header-link">Gift Cards</a>
                 </li>
                 <li class="header-item">
-                    <a href="signin.html" class="header-link">Sign In</a>
+                    <a href="signin.php" class="header-link">Sign In</a>
                 </li>
               </ul>   
           </nav>
